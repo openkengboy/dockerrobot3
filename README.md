@@ -13,14 +13,14 @@ Data-driven testing is a software testing methodology that is used in the testin
 
 Test-driven development development (TDD) is a software development process that relies on the repetition of a very short development cycle: requirements are turned into very specific test cases, then the code is improved so that the tests pass. This is opposed to software development that allows code to be added that is not proven to meet requirements.
 
-# Folder in images 
+# Folder in docker images 
 - /tests is for robotframework files.
 - /result is for result of running automate test
 
 # How to docker run automate test
-$> git clone https://github.com/openkengboy/robotframwork3.git
-$> cd robotframwork3
-$> docker run --rm -it -v $(pwd)/example:/tests -v $(pwd)/example/result:/result kengboy/robotframework3
+- $> git clone https://github.com/openkengboy/robotframwork3.git
+- $> cd robotframwork3
+- $> docker run --rm -it -v $(pwd)/example:/tests -v $(pwd)/example/result:/result kengboy/robotframework3
 
 # Run robot with arguments 
-$> docker run --rm -it -v $(pwd)/example:/tests -v $(pwd)/example/result:/result kengboy/robotframework3 -i 01
+- $> docker run --rm -it -v $(pwd)/example:/tests -v $(pwd)/example/result:/result kengboy/robotframework3 -i 01
