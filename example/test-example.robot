@@ -8,10 +8,12 @@ ${timeout}        30s
 
 *** Test Cases ***
 เปิดดูเว็บ เราไม่ทิ้งกัน.com
+    [Tags]    01
     Open website            https://www.เราไม่ทิ้งกัน.com
     Page Should Contain     5,000 บาท
 
 เปิดดูหน้ากรอกฟอร์มได้
+    [Tags]    02
     Open website            https://www.เราไม่ทิ้งกัน.com
     Click Link              ลงทะเบียนมาตรการชดเชยรายได้
     Wait Until Element Is Visible    css:#cbAccept
