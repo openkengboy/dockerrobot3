@@ -12,7 +12,7 @@ ${API_USER}       eve.holt@reqres.in
 ${API_PASS}       cityslicka
 
 *** Test Cases ***
-เข้าสู้ระบบด้วยการ login ผ่าน api
+เข้าสู่ระบบด้วยการ login ผ่าน api
     [Tags]    11
     &{headers}=       Create Dictionary    Content-Type     application/json 
     Create Session    apiLogin          ${SITE_API}         ${headers}
