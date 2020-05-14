@@ -12,15 +12,14 @@ ${timeout}        30s
     Open website            https://www.เราไม่ทิ้งกัน.com
     Page Should Contain     5,000 บาท
 
-เปิดดูหน้ากรอกฟอร์มได้
+เปิดดูหน้าตรวจสอบสถานะได้
     [Tags]    02
     Open website            https://www.เราไม่ทิ้งกัน.com
-    Click Link              ลงทะเบียนมาตรการชดเชยรายได้
-    Wait Until Element Is Visible    css:#cbAccept
-    Click Element           css:#cbAccept
-    Click Button            css:#agreement_confirm
-    Wait Until Element Is Visible    css:body > app-root > app-layout > app-register > div > form > h4
-    Page Should Contain     ข้อมูลผู้ลงทะเบียน
+    Click Element           css:.btn-checkstatus
+    Input Text              id:citizenId        1111111111119
+    Click Button            id:verify
+    Sleep                   3
+    Page Should Contain     กรุณากรอกหมายเลขโทรศัพท์ที่ใช้ลงทะเบียน
 
 *** Keywords ***
 
