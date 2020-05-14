@@ -24,7 +24,7 @@ RUN apt-get update -y \
 RUN wget -N https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P ~/Downloads
 RUN dpkg -i ~/Downloads/google-chrome-stable_current_amd64.deb; apt-get -fy install
 RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install robotframework-seleniumlibrary webdrivermanager robotframework-requests
+RUN python3 -m pip install robotframework-seleniumlibrary webdrivermanager robotframework-requests robotframework-csvlib
 RUN webdrivermanager chrome --linkpath /usr/local/bin
 RUN python3 -m pip freeze
 ENTRYPOINT [ "/opt/bin/entry_point.sh" ]
